@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Background Color</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Change the Background Color</h1>
+      <p>Current background color: <span id="currentColor">#f0f0f0</span></p>
+
+      <button class="colorButton" id="randomColorButton">Random Color</button>
+      <button class="colorButton" id="resetColorButton">Reset Color</button>
+
+      <div class="input-section">
+        <label for="customColor">Choose a color:</label>
+        <input type="text" id="customColor" placeholder="#abcdef" />
+        <button class="colorButton" id="setColorButton">Set Color</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
