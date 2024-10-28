@@ -1,25 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Background Color</title>
+    <title>Mein Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Change the Background Color</h1>
-      <p>Current background color: <span id="currentColor">#f0f0f0</span></p>
+    <header>
+      <h1>Willkommen auf meiner Portfolio-Seite</h1>
+      <nav>
+        <a href="#about">Über mich</a>
+        <a href="#projects">Projekte</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </header>
 
-      <button class="colorButton" id="randomColorButton">Random Color</button>
-      <button class="colorButton" id="resetColorButton">Reset Color</button>
+    <section id="about">
+      <h2>Über mich</h2>
+      <p>Lorem ipsum...</p>
+    </section>
 
-      <div class="input-section">
-        <label for="customColor">Choose a color:</label>
-        <input type="text" id="customColor" placeholder="#abcdef" />
-        <button class="colorButton" id="setColorButton">Set Color</button>
+    <section id="projects">
+      <h2>Projekte</h2>
+      <div id="project-list">
+        <!-- Projekte werden hier aufgelistet -->
       </div>
-    </div>
+    </section>
+
+    <section id="contact">
+      <h2>Kontakt</h2>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input
+          type="hidden"
+          name="access_key"
+          value="005f8931-4ac6-42f5-9040-43c53789242a"
+        />
+
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Dein Name"
+          required
+        />
+
+        <label for="email">E-Mail</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Deine E-Mail"
+          required
+        />
+
+        <label for="message">Nachricht</label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Deine Nachricht"
+          required
+        ></textarea>
+
+        <button type="submit">Nachricht senden</button>
+      </form>
+    </section>
 
     <script src="script.js"></script>
   </body>
