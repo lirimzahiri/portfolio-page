@@ -15,6 +15,11 @@ header nav a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ddd;
 }
 
 section {
@@ -23,21 +28,7 @@ section {
   max-width: 800px;
 }
 
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-form button {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-}
-
-/* Container für das Formular */
+/*Kontaktformular*/
 form {
   display: flex;
   flex-direction: column;
@@ -50,7 +41,7 @@ form {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Stile für Eingabefelder und Textarea */
+/* Eingabefelder und Textarea */
 form input[type="text"],
 form input[type="email"],
 form textarea {
@@ -63,20 +54,18 @@ form textarea {
   transition: border-color 0.3s;
 }
 
-/* Hover- und Fokus-Stil */
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form textarea:focus {
   border-color: #555;
 }
 
-/* Textarea-Größe */
 form textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-/* Submit-Button-Stil */
+/* Submit-Button */
 form button[type="submit"] {
   padding: 12px;
   font-size: 16px;
@@ -90,4 +79,83 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
   background-color: #555;
+}
+
+/* Dark-Modus */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode section {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode form {
+  background-color: #2a2a2a;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode form input[type="text"],
+body.dark-mode form input[type="email"],
+body.dark-mode form textarea {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+body.dark-mode form input[type="text"]:focus,
+body.dark-mode form input[type="email"]:focus,
+body.dark-mode form textarea:focus {
+  border-color: #888;
+}
+
+button#dark-mode-toggle {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: Helvetica;
+  font-size: 23px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 23px;
+}
+h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 23px;
+}
+p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+blockquote {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+pre {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
 }
