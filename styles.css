@@ -7,6 +7,16 @@
   --accent-clr: #5e63ff;
   --secondary-text-clr: #b0b3c1;
 }
+
+:root[data-theme="light"] {
+  --base-clr: #ffffff;
+  --line-clr: #cccccc;
+  --hover-clr: #f0f0f0;
+  --text-clr: #000000;
+  --accent-clr: #007bff;
+  --secondary-text-clr: #555555;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -274,4 +284,177 @@ main p {
 .socials-container a:hover::after {
   transform: translateY(-42px) rotate(0);
   opacity: 1;
+}
+
+.container {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid var(--line-clr);
+  border-radius: 10px;
+  background-color: var(--hover-clr);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.skill {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid var(--line-clr);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--hover-clr);
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.skill:hover {
+  background-color: var(--accent-clr);
+  color: white;
+}
+.skill:hover::after {
+  content: attr(data-skill) "%";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.progress-bar {
+  background-color: var(--line-clr);
+  height: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-bar .progress {
+  height: 100%;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.theme-switcher {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  border-radius: 0; /* Kein abgerundeter Rand */
+  color: var(--text-clr);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: var(--accent-clr);
+  color: white;
+}
+
+@import "https://unpkg.com/open-props/easings.min.css";
+
+.sun-and-moon > :is(.moon, .sun, .sun-beams) {
+  transform-origin: center;
+}
+
+.sun-and-moon > :is(.moon, .sun) {
+  fill: var(--icon-fill);
+}
+
+.theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
+  fill: var(--icon-fill-hover);
+}
+
+.sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill);
+  stroke-width: 2px;
+}
+
+.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill-hover);
+}
+
+[data-theme="dark"] .sun-and-moon > .sun {
+  transform: scale(1.75);
+}
+
+[data-theme="dark"] .sun-and-moon > .sun-beams {
+  opacity: 0;
+}
+
+[data-theme="dark"] .sun-and-moon > .moon > circle {
+  transform: translateX(-7px);
+}
+
+@supports (cx: 1) {
+  [data-theme="dark"] .sun-and-moon > .moon > circle {
+    cx: 17;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sun-and-moon > .sun {
+    transition: transform 0.5s var(--ease-elastic-3);
+  }
+
+  .sun-and-moon > .sun-beams {
+    transition: transform 0.5s var(--ease-elastic-4), opacity 0.5s var(--ease-3);
+  }
+
+  .sun-and-moon .moon > circle {
+    transition: transform 0.25s var(--ease-out-5);
+  }
+
+  @supports (cx: 1) {
+    .sun-and-moon .moon > circle {
+      transition: cx 0.25s var(--ease-out-5);
+    }
+  }
+
+  [data-theme="dark"] .sun-and-moon > .sun {
+    transition-timing-function: var(--ease-3);
+    transition-duration: 0.25s;
+    transform: scale(1.75);
+  }
+
+  [data-theme="dark"] .sun-and-moon > .sun-beams {
+    transition-duration: 0.15s;
+    transform: rotateZ(-25deg);
+  }
+
+  [data-theme="dark"] .sun-and-moon > .moon > circle {
+    transition-duration: 0.5s;
+    transition-delay: 0.25s;
+  }
+}
+
+#sidebar .theme-switcher {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 250px;
+  padding: 5px 1em;
+  background-color: var(--base-clr);
+  border-right: 1px solid var(--line-clr);
+
+  position: sticky;
+  top: 0;
+  align-self: start;
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
+#sidebar.close .theme-switcher {
 }
