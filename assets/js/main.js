@@ -284,3 +284,12 @@
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 })();
+
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const width = (scrollTop / scrollHeight) * 100;
+  document.getElementById("scroll-indicator").style.width = width + "%";
+});

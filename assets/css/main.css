@@ -79,13 +79,16 @@ a:hover {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+h2 {
+  color: var(--accent-color);
 }
 
 /* PHP Email Form Messages
@@ -878,7 +881,7 @@ section,
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Light Bulb Button */
+/* Theme switch button */
 .theme-toggle {
   display: flex;
   justify-content: center;
@@ -897,4 +900,14 @@ section,
 
 .theme-toggle i {
   font-size: 20px;
+}
+
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: var(--accent-color);
+  width: 0;
+  z-index: 9999;
 }
