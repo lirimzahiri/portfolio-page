@@ -11,7 +11,9 @@
     headerToggleBtn.classList.toggle("bi-list");
     headerToggleBtn.classList.toggle("bi-x");
   }
-  headerToggleBtn.addEventListener("click", headerToggle);
+  if (headerToggleBtn) {
+    headerToggleBtn.addEventListener("click", headerToggle);
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -25,14 +27,64 @@
   });
 
   /**
-   * Toggle mobile nav dropdowns
+   * Theme and Accent Color Initialization
    */
-  document.querySelectorAll(".navmenu .toggle-dropdown").forEach((navmenu) => {
-    navmenu.addEventListener("click", function (e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle("active");
-      this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
-      e.stopImmediatePropagation();
+  document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const root = document.documentElement;
+
+    // Default Accent Color
+    const defaultAccentColor = "#c44bfb";
+
+    // Function: Set Accent Color
+    function setAccentColor(color = defaultAccentColor) {
+      root.style.setProperty("--accent-color", color);
+
+      // Save selected accent color in Local Storage
+      localStorage.setItem("accent-color", color);
+    }
+
+    // Function: Update Theme and Icon
+    function toggleTheme() {
+      const currentTheme = root.getAttribute("data-theme") || "light";
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      root.setAttribute("data-theme", newTheme);
+
+      // Update theme toggle icon
+      themeToggle.innerHTML =
+        newTheme === "dark"
+          ? '<i class="bi bi-lightbulb navicon"></i>'
+          : '<i class="bi bi-lightbulb-fill navicon"></i>';
+
+      // Save theme in Local Storage
+      localStorage.setItem("theme", newTheme);
+    }
+
+    // Initialize Theme and Accent Color
+    const savedTheme = localStorage.getItem("theme") || "light";
+    root.setAttribute("data-theme", savedTheme);
+
+    const savedAccentColor =
+      localStorage.getItem("accent-color") || defaultAccentColor;
+    setAccentColor(savedAccentColor);
+
+    // Update Theme Toggle Icon on Load
+    themeToggle.innerHTML =
+      savedTheme === "dark"
+        ? '<i class="bi bi-lightbulb navicon"></i>'
+        : '<i class="bi bi-lightbulb-fill navicon"></i>';
+
+    // Add Event Listener to Theme Toggle
+    themeToggle.addEventListener("click", toggleTheme);
+
+    // Add Event Listener to Accent Color Buttons
+    const colorButtons = document.querySelectorAll(".color-btn");
+    colorButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedColor = button.getAttribute("data-color");
+        setAccentColor(selectedColor);
+      });
     });
   });
 
@@ -58,16 +110,18 @@
         : scrollTop.classList.remove("active");
     }
   }
-  scrollTop.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+  if (scrollTop) {
+    scrollTop.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     });
-  });
 
-  window.addEventListener("load", toggleScrollTop);
-  document.addEventListener("scroll", toggleScrollTop);
+    window.addEventListener("load", toggleScrollTop);
+    document.addEventListener("scroll", toggleScrollTop);
+  }
 
   /**
    * Animation on scroll function and init
@@ -151,22 +205,18 @@
     isotopeItem
       .querySelectorAll(".isotope-filters li")
       .forEach(function (filters) {
-        filters.addEventListener(
-          "click",
-          function () {
-            isotopeItem
-              .querySelector(".isotope-filters .filter-active")
-              .classList.remove("filter-active");
-            this.classList.add("filter-active");
-            initIsotope.arrange({
-              filter: this.getAttribute("data-filter"),
-            });
-            if (typeof aosInit === "function") {
-              aosInit();
-            }
-          },
-          false
-        );
+        filters.addEventListener("click", function () {
+          isotopeItem
+            .querySelector(".isotope-filters .filter-active")
+            .classList.remove("filter-active");
+          this.classList.add("filter-active");
+          initIsotope.arrange({
+            filter: this.getAttribute("data-filter"),
+          });
+          if (typeof aosInit === "function") {
+            aosInit();
+          }
+        });
       });
   });
 
@@ -192,7 +242,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener("load", function (e) {
+  window.addEventListener("load", function () {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -234,39 +284,3 @@
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 })();
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Alle Buttons abrufen
-  const colorButtons = document.querySelectorAll(".color-btn");
-
-  // Event-Listener hinzufügen
-  colorButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const newColor = button.getAttribute("data-color"); // Farbe aus Button-Daten abrufen
-      document.documentElement.style.setProperty("--accent-color", newColor); // CSS-Variable setzen
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const themeToggle = document.getElementById("theme-toggle");
-  const root = document.documentElement;
-
-  // Theme und Icon wechseln
-  themeToggle.addEventListener("click", () => {
-    const currentTheme = root.getAttribute("data-theme");
-
-    if (currentTheme === "dark") {
-      root.setAttribute("data-theme", "light");
-    } else {
-      root.setAttribute("data-theme", "dark");
-    }
-
-    // Optional: Speichere das Theme im Local Storage
-    localStorage.setItem("theme", root.getAttribute("data-theme"));
-  });
-
-  // Theme aus Local Storage laden
-  const savedTheme = localStorage.getItem("theme") || "light";
-  root.setAttribute("data-theme", savedTheme);
-});

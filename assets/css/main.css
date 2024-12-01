@@ -10,26 +10,27 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 /* Light Theme */
 :root {
-  --background-color: #f5f8ff; /* Light background */
-  --default-color: #00050f; /* Darker text for light background */
-  --heading-color: #00050f; /* Stronger heading color */
-  --accent-color: #c44bfb; /* Light-theme accent */
-  --surface-color: #ffffff; /* Surface stays light */
-  --contrast-color: #00050f; /* Contrast for dark text */
+  --background-color: #f5f8ff;
+  --default-color: #00050f;
+  --heading-color: #00050f;
+  --accent-color: #c44bfb;
+  --surface-color: #ffffff;
+  --contrast-color: #00050f;
 }
 
 /* Dark Theme */
 :root[data-theme="dark"] {
-  --background-color: #00030a; /* Dark background */
-  --default-color: #f0f5ff; /* Light text for dark background */
-  --heading-color: #f0f5ff; /* Stronger heading color */
-  --accent-color: color-mix(
-    in srgb,
-    var(--accent-color),
-    black 10%
-  ); /* Dark-theme accent */
-  --surface-color: #1a1a1a; /* Slightly lighter than the background */
-  --contrast-color: #f0f5ff; /* Light contrast text */
+  --background-color: #00030a;
+  --default-color: #f0f5ff;
+  --heading-color: #f0f5ff;
+  --accent-color: var(--accent-color);
+  --surface-color: #1a1a1a;
+  --contrast-color: #f0f5ff;
+}
+
+:root[data-theme="dark"] .some-element {
+  background-color: var(--accent-color);
+  filter: brightness(20%); /* Nur im Dark-Modus anwenden */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -49,16 +50,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f9f9f9;
-  --surface-color: #ffffff;
-}
-
-.dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
+  --background-color: var(--background-color);
 }
 
 /* Smooth scroll */
@@ -532,8 +524,10 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
-  overflow: clip;
+  max-width: 95%; /* Begrenzung der Breite */
+  margin: 0 auto; /* Zentriert die Sektion horizontal */
+  padding: 60px 5%; /* Zusätzlicher Innenabstand links und rechts */
+  overflow: hidden; /* Verhindert überlaufende Inhalte */
 }
 
 /*--------------------------------------------------------------
@@ -594,24 +588,15 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  background-color: var(--background-color); /* Hintergrundfarbe */
 }
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   inset: 0;
-  z-index: 2;
+  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  z-index: 1;
 }
 
 .hero .container {
@@ -640,7 +625,7 @@ section,
 }
 
 .hero .social-links a {
-  font-size: 20px;
+  font-size: 30px;
   display: inline-block;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   line-height: 1;
@@ -891,4 +876,25 @@ section,
 .color-btn:hover {
   transform: scale(1.2);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Light Bulb Button */
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--default-color), transparent 92%);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--nav-hover-color);
+  color: var(--contrast-color);
+}
+
+.theme-toggle i {
+  font-size: 20px;
 }
