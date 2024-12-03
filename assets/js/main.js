@@ -293,3 +293,46 @@ window.addEventListener("scroll", () => {
   const width = (scrollTop / scrollHeight) * 100;
   document.getElementById("scroll-indicator").style.width = width + "%";
 });
+
+// Contact Form //
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Collect form data and convert to JSON
+    const formData = new FormData(form);
+    const json = JSON.stringify(Object.fromEntries(formData));
+    result.innerHTML = "Please wait...";
+
+    // Send form data to Web3Forms API
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        const json = await response.json();
+        if (response.status === 200) {
+          result.innerHTML = "Your message has been sent successfully!";
+        } else {
+          result.innerHTML = json.message;
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        result.innerHTML = "Something went wrong. Please try again.";
+      })
+      .finally(() => {
+        form.reset(); // Reset form fields
+        setTimeout(() => {
+          result.innerHTML = ""; // Clear result message
+        }, 3000);
+      });
+  });
+});
