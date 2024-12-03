@@ -891,3 +891,48 @@ section,
   margin: 0;
   text-align: left; /* Text der Repositories links ausrichten */
 }
+
+/* GitHub Button Styling */
+.btn {
+  background-color: var(--accent-color); /* Accent Color */
+  color: var(--contrast-color); /* Kontrastfarbe */
+  font-family: var(--default-font); /* Einheitliche Schriftart */
+  font-weight: 400; /* Leichter als zuvor */
+  font-size: 14px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px; /* Runde Ecken */
+  text-transform: capitalize;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+/* Hover-Effekt */
+.btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color); /* Kontrast bleibt gleich */
+}
+
+/* Responsive Anpassungen */
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 12px; /* Kleinere Schriftgröße für kleinere Bildschirme */
+    padding: 6px 16px; /* Weniger Platzbedarf */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .btn {
+    font-size: 11px; /* Noch kleinere Schrift für sehr kleine Bildschirme */
+    padding: 5px 14px; /* Noch kompaktere Größe */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .btn {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+}
