@@ -91,58 +91,6 @@ h2 {
   color: var(--accent-color);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -910,4 +858,36 @@ section,
   background-color: var(--accent-color);
   width: 0;
   z-index: 9999;
+}
+
+/* GitHub Section Styling */
+.github-content {
+  display: flex;
+  flex-direction: row; /* Elemente nebeneinander anordnen */
+  justify-content: space-around; /* Platz gleichmäßig verteilen */
+  align-items: flex-start; /* Obere Ausrichtung */
+  gap: 20px; /* Abstand zwischen Profil und Repositories */
+  flex-wrap: wrap; /* Sicherstellen, dass bei kleineren Bildschirmen Inhalte umgebrochen werden */
+  text-align: center;
+}
+
+.profile-details,
+.repositories {
+  flex: 1; /* Beide Spalten gleich breit */
+  max-width: 450px; /* Maximale Breite einer Spalte */
+}
+
+.github-avatar {
+  width: 100px; /* Größe des Avatars */
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  margin: 0 auto 10px; /* Zentrierung */
+}
+
+.repo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Text der Repositories links ausrichten */
 }

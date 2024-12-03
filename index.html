@@ -51,6 +51,11 @@
             >
           </li>
           <li>
+            <a href="#github"
+              ><i class="bi bi-github navicon"></i><span>GitHub</span></a
+            >
+          </li>
+          <li>
             <a href="#about"
               ><i class="bi bi-person navicon"></i><span>About</span></a
             >
@@ -77,8 +82,7 @@
               id="theme-toggle"
               class="theme-toggle"
             >
-              <i class="bi bi-lightbulb-fill navicon"></i
-              ><span>Change Theme</span>
+              <i class="bi bi-lightbulb-fill navicon"></i>
             </a>
           </li>
           <li class="color-dropdown">
@@ -103,8 +107,8 @@
               ></button>
               <button
                 class="color-btn"
-                data-color="#2516ef"
-                style="background-color: #2516ef"
+                data-color="#0d6efd"
+                style="background-color: #0d6efd"
               ></button>
             </div>
           </li>
@@ -150,7 +154,36 @@
         </div>
       </section>
       <!-- /Hero Section -->
-
+      <!-- Section Title -->
+      <section id="github" class="github section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>My GitHub</h2>
+          <p>Check out my latest repositories.</p>
+        </div>
+        <div
+          class="container github-content"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="profile-details">
+            <img id="github-avatar" alt="GitHub Avatar" class="github-avatar" />
+            <div class="profile-info">
+              <h4 id="github-username"></h4>
+              <p id="github-bio"></p>
+              <a
+                id="github-link"
+                href="#"
+                target="_blank"
+                class="btn btn-primary mt-3"
+                >View GitHub Profile</a
+              >
+            </div>
+          </div>
+          <div class="repositories">
+            <ul id="repo-list" class="repo-list"></ul>
+          </div>
+        </div>
+      </section>
       <!-- About Section -->
       <section id="about" class="about section">
         <div class="container section-title" data-aos="fade-up">

@@ -336,3 +336,42 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const GITHUB_USERNAME = "lirimzahiri";
+  const PROFILE_URL = `https://api.github.com/users/${GITHUB_USERNAME}`;
+  const REPOS_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
+
+  async function fetchGitHubData() {
+    try {
+      // GitHub-Profil abrufen
+      const profileResponse = await fetch(PROFILE_URL);
+      const profileData = await profileResponse.json();
+
+      // Profil-Daten anzeigen
+      document.getElementById("github-avatar").src = profileData.avatar_url;
+      document.getElementById("github-username").textContent =
+        profileData.login;
+      document.getElementById("github-bio").textContent = profileData.bio || "";
+      document
+        .getElementById("github-link")
+        .setAttribute("href", profileData.html_url);
+
+      // GitHub-Repositories abrufen
+      const reposResponse = await fetch(REPOS_URL);
+      const reposData = await reposResponse.json();
+
+      // Repositories anzeigen
+      const repoList = document.getElementById("repo-list");
+      reposData.forEach((repo) => {
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
+        repoList.appendChild(listItem);
+      });
+    } catch (error) {
+      console.error("Error fetching GitHub data:", error);
+    }
+  }
+
+  fetchGitHubData();
+});
