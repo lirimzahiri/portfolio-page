@@ -631,38 +631,46 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Dynamische Spalten */
+  gap: 40px;
+  justify-items: center;
 }
 
-.skills .progress .skill {
-  color: var(--heading-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
+.skill-item {
+  display: flex;
+  flex-direction: column; /* Stapelt Icon und Text */
+  justify-content: center; /* Zentriert vertikal */
+  align-items: center; /* Zentriert horizontal */
+  text-align: center;
+  width: 180px;
+  height: 200px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+.skill-item i {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
 }
 
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
+.skill-item p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--contrast-color);
 }
 
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /*--------------------------------------------------------------
@@ -860,11 +868,13 @@ section,
   z-index: 9999;
 }
 
-/* GitHub Section Styling */
+/*--------------------------------------------------------------
+# GitHub section
+--------------------------------------------------------------*/
 .github-content {
   display: flex;
   flex-direction: row; /* Elemente nebeneinander anordnen */
-  justify-content: space-around; /* Platz gleichmäßig verteilen */
+  justify-content: space-around; /* Platz gleichmässig verteilen */
   align-items: flex-start; /* Obere Ausrichtung */
   gap: 20px; /* Abstand zwischen Profil und Repositories */
   flex-wrap: wrap; /* Sicherstellen, dass bei kleineren Bildschirmen Inhalte umgebrochen werden */
@@ -878,7 +888,7 @@ section,
 }
 
 .github-avatar {
-  width: 100px; /* Größe des Avatars */
+  width: 100px; /* Grösse des Avatars */
   height: 100px;
   border-radius: 50%;
   border: 3px solid var(--accent-color);
@@ -918,7 +928,7 @@ section,
 /* Responsive Anpassungen */
 @media screen and (max-width: 768px) {
   .btn {
-    font-size: 12px; /* Kleinere Schriftgröße für kleinere Bildschirme */
+    font-size: 12px; /* Kleinere Schriftgrösse für kleinere Bildschirme */
     padding: 6px 16px; /* Weniger Platzbedarf */
   }
 }
@@ -926,7 +936,7 @@ section,
 @media screen and (max-width: 480px) {
   .btn {
     font-size: 11px; /* Noch kleinere Schrift für sehr kleine Bildschirme */
-    padding: 5px 14px; /* Noch kompaktere Größe */
+    padding: 5px 14px; /* Noch kompaktere Grösse */
   }
 }
 
