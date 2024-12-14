@@ -69,12 +69,6 @@ Diese Daten werden automatisch über die **GitHub API** abgerufen und auf der Se
 2. **Dateien öffnen**  
    Bearbeite die HTML-, CSS- und JS-Dateien in einem Editor wie VS Code.
 
-## Fokus und Ziele
-
-- **Benutzerzentrierung**: Optimierung für ein intuitives Erlebnis.
-- **Technische Präzision**: Einsatz moderner Webtechnologien für Leistung und Zuverlässigkeit.
-- **Individualisierung**: Nutzer können ihre bevorzugten Einstellungen wählen, die auch beim nächsten Besuch erhalten bleiben.
-
 ## Kontakt
 
 Ich freue mich über dein Feedback oder Anfragen! Du erreichst mich über folgende Kanäle:
@@ -110,3 +104,6 @@ Während der Entwicklung dieser Website habe ich auf verschiedene Ressourcen und
 
 - **ChatGPT**: Unterstützung bei der Dokumentation, Code-Optimierung und allgemeinen technischen Fragen sowie Problemlösungen während der Entwicklung.  
   [https://openai.com/chatgpt](https://openai.com/chatgpt)
+
+- **Favicon**: Erstellen des eigenen Favicons für die Seite.
+  [https://favicon.io/](https://favicon.io/)
