@@ -8,7 +8,7 @@
 
 Herzlich willkommen auf meiner persönlichen Portfolio-Website! Diese Seite wurde gestaltet, um meine beruflichen Kompetenzen und technischen Fähigkeiten eindrucksvoll darzustellen. Sie ermöglicht Besuchern ein modernes, interaktives und intuitives Nutzererlebnis.
 
-Entstanden ist die Website als persönliches Projekt im Rahmen meines Studiums an der **Berner Fachhochschule (BFH)** im Studiengang **BSc Business IT**, speziell im Modul "EWEB - Web Engineering". Sie dient als digitale Visitenkarte, die meine Expertise in der Webentwicklung und im Umgang mit modernen Technologien unterstreicht.
+Entstanden ist die Website als persönliches Projekt im Rahmen meines Studiums an der **Berner Fachhochschule (BFH)** im Studiengang **BSc Business IT**, im Modul EWEB - Web Engineering. Sie dient als digitale Visitenkarte, die meine Expertise in der Webentwicklung und im Umgang mit modernen Technologien unterstreicht.
 
 ## Technologien
 
@@ -82,3 +82,31 @@ Ich freue mich über dein Feedback oder Anfragen! Du erreichst mich über folgen
 - **E-Mail**: [lirim.zahiri@students.bfh.ch](mailto:lirim.zahiri@students.bfh.ch)
 - **GitHub**: [github.com/lirimzahiri](https://github.com/lirimzahiri)
 - **LinkedIn**: [linkedin.com/in/lirimzahiri](https://linkedin.com/in/lirimzahiri)
+
+## Quellen und Referenzen
+
+Während der Entwicklung dieser Website habe ich auf verschiedene Ressourcen und Tools zurückgegriffen, um Inspiration zu finden und technische Herausforderungen zu lösen. Nachfolgend ist eine Liste der wichtigsten Quellen:
+
+- **Themewagon**: Die ursprüngliche Bootstrap-Vorlage, die als Basis für die Website diente, wurde von Themewagon bezogen und individuell angepasst.  
+  [https://themewagon.com/](https://themewagon.com/)
+
+- **Dribbble**: Plattform zur Inspiration für das allgemeine Design und die visuelle Gestaltung der Website.  
+  [https://dribbble.com/](https://dribbble.com/)
+
+- **Devicon**: Verwendung von Icons für die Darstellung meiner technischen Fähigkeiten (z. B. Programmiersprachen und Tools).  
+  [https://devicon.dev](https://devicon.dev)
+
+- **Realtime Colors**: Unterstützung bei der Auswahl und Anpassung des Farbschemas für die Website.  
+  [https://www.realtimecolors.com](https://www.realtimecolors.com)
+
+- **CodePen**: Inspiration für interaktive Elemente und Designideen.  
+  [https://codepen.io](https://codepen.io)
+
+- **Bootstrap**: Nutzung des Grid-Systems und von UI-Komponenten für ein responsives Design.  
+  [https://getbootstrap.com](https://getbootstrap.com)
+
+- **Web3Forms**: Umsetzung und Integration des Kontaktformulars.  
+  [https://web3forms.com](https://web3forms.com)
+
+- **ChatGPT**: Unterstützung bei der Dokumentation, Code-Optimierung und allgemeinen technischen Fragen. ChatGPT diente als hilfreiches Werkzeug für die Erstellung von Texten und bei Problemlösungen während der Entwicklung.  
+  [https://openai.com/chatgpt](https://openai.com/chatgpt)
