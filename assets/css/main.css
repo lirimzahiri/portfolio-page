@@ -576,10 +576,12 @@ section,
 }
 
 .hero .social-links a {
-  font-size: 30px;
+  font-size: 40px;
   display: inline-block;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   line-height: 1;
+  width: 50px; /* Breite der Klickfläche */
+  height: 50px; /* Höhe der Klickfläche */
   margin-right: 20px;
   transition: 0.3s;
 }
@@ -641,6 +643,10 @@ section,
   justify-items: center;
 }
 
+#skills .section-title p {
+  margin-bottom: 30px;
+}
+
 .skill-item {
   display: flex;
   flex-direction: column; /* Stapelt Icon und Text */
@@ -680,7 +686,6 @@ section,
   color: var(--heading-color);
   font-size: 26px;
   font-weight: 700;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
