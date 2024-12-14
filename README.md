@@ -108,5 +108,5 @@ Während der Entwicklung dieser Website habe ich auf verschiedene Ressourcen und
 - **Web3Forms**: Umsetzung und Integration des Kontaktformulars.  
   [https://web3forms.com](https://web3forms.com)
 
-- **ChatGPT**: Unterstützung bei der Dokumentation, Code-Optimierung und allgemeinen technischen Fragen. ChatGPT diente als hilfreiches Werkzeug für die Erstellung von Texten und bei Problemlösungen während der Entwicklung.  
+- **ChatGPT**: Unterstützung bei der Dokumentation, Code-Optimierung und allgemeinen technischen Fragen sowie Problemlösungen während der Entwicklung.  
   [https://openai.com/chatgpt](https://openai.com/chatgpt)
