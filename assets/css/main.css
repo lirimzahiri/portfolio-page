@@ -951,3 +951,13 @@ section,
     padding: 10px 24px;
   }
 }
+
+#spotify {
+  text-align: center;
+}
+
+.spotify-embed iframe {
+  margin-top: 20px; /* Abstand über dem iFrame */
+  max-width: 100%; /* Responsiv bleiben */
+  border: none; /* Entfernt den Standardrahmen des iFrames */
+}
