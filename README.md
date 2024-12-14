@@ -8,7 +8,7 @@
 
 Herzlich willkommen auf meiner persönlichen Portfolio-Website! Diese Seite wurde gestaltet, um meine beruflichen Kompetenzen und technischen Fähigkeiten eindrucksvoll darzustellen. Sie ermöglicht Besuchern ein modernes, interaktives und intuitives Nutzererlebnis.
 
-Entstanden ist die Website als persönliches Projekt im Rahmen meines Studiums an der **Berner Fachhochschule (BFH)** im Studiengang **BSc Business IT**, im Modul **EWEB - Web Engineering**. Sie dient als digitale Visitenkarte, die meine Expertise in der Webentwicklung und im Umgang mit modernen Technologien unterstreicht.0
+Entstanden ist die Website als persönliches Projekt im Rahmen meines Studiums an der **Berner Fachhochschule (BFH)** im Studiengang **BSc Business IT**, im Modul **EWEB - Web Engineering**. Sie dient als digitale Visitenkarte, die meine Expertise in der Webentwicklung und im Umgang mit modernen Technologien unterstreicht.
 
 ## Technologien
 
