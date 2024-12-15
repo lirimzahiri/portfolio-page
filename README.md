@@ -113,8 +113,8 @@ Während der Entwicklung dieser Website habe ich auf verschiedene Ressourcen und
 - **ChatGPT**: Unterstützung bei der Dokumentation, Code-Optimierung und allgemeinen technischen Fragen sowie Problemlösungen während der Entwicklung.  
   [https://openai.com/chatgpt](https://openai.com/chatgpt)
 
-- **Favicon**: Erstellen des eigenen Favicons für die Seite.
+- **Favicon**: Erstellen des eigenen Favicons für die Seite.  
   [https://favicon.io/](https://favicon.io/)
 
-- **Lottieflies**: Animationen kostenslos herunterladen.
+- **Lottieflies**: Animationen kostenslos herunterladen.  
   [https://lottiefiles.com](https://lottiefiles.com)
