@@ -375,3 +375,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetchGitHubData();
 });
+
+// Animation initialisieren
+const animation = lottie.loadAnimation({
+  container: document.getElementById("lottie-arrow"), // Container-Element
+  renderer: "svg", // Rendert als SVG
+  loop: true, // Endlosschleife
+  autoplay: true, // Automatisch abspielen
+  path: "assets/img/arrow_animation.json", // Pfad zur Lottie-Animation
+});
+
+// Funktion: Setze Farbe für Lottie
+function updateLottieColor() {
+  const accentColor = getComputedStyle(document.documentElement)
+    .getPropertyValue("--accent-color")
+    .trim();
+
+  const paths = document.querySelectorAll("#lottie-arrow svg path[stroke]");
+  paths.forEach((path) => {
+    path.setAttribute("stroke", accentColor);
+  });
+}
+
+// Warte, bis die Animation geladen ist, und aktualisiere die Farbe
+animation.addEventListener("DOMLoaded", updateLottieColor);
+
+// Beobachte Änderungen der Accent-Farbe
+const root = document.documentElement;
+const observer = new MutationObserver(() => {
+  updateLottieColor();
+});
+
+// Überwache das Root-Element für Änderungen an Inline-Styles
+observer.observe(root, { attributes: true, attributeFilter: ["style"] });
+
+const arrowContainer = document.getElementById("lottie-arrow");
