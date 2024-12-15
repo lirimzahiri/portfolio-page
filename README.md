@@ -10,6 +10,26 @@ Herzlich willkommen auf meiner persönlichen Portfolio-Website! Diese Seite wurd
 
 Entstanden ist die Website als persönliches Projekt im Rahmen meines Studiums an der **Berner Fachhochschule (BFH)** im Studiengang **BSc Business IT**, im Modul **EWEB - Web Engineering**. Sie dient als digitale Visitenkarte, die meine Expertise in der Webentwicklung und im Umgang mit modernen Technologien unterstreicht.
 
+## Installation und Anwendung
+
+1. **Repository klonen**
+   ```bash
+    git clone https://github.com/lirimzahiri/portfolio-page
+   ```
+   **Navigiere in das Projektverzeichnis**
+   ```bash
+   cd portfolio-page
+   ```
+2. **Dateien öffnen**  
+   Bearbeite die HTML-, CSS- und JS-Dateien in einem Editor wie VS Code.
+
+3. **Lokale Server-Umgebung starten**  
+   Verwende einen lokalen Entwicklungsserver, um die Website zu testen (z. B. mit VS Code und der Erweiterung **Live Server**) oder öffne die index.html mit deinem Browser.
+
+4. **Website direkt anschauen**  
+   Die Website ist bereits auf GitHub Pages gehostet und kann ohne weitere Installation unter folgender URL angesehen werden:  
+   [https://lirimzahiri.github.io/portfolio-page/](https://lirimzahiri.github.io/portfolio-page/)
+
 ## Technologien
 
 Die Website verwendet folgende Technologien und Frameworks:
@@ -68,21 +88,11 @@ Diese Daten werden automatisch über die **GitHub API** abgerufen und auf der Se
    - Die Animation wird mit **lottie-web** eingebunden und aus einer JSON-Datei gerendert.
    - Die Farbe passt sich dynamisch an die aktuelle **`--accent-color`** der Website an.
 
-## Installation und Anwendung
-
-1. **Repository klonen**
-   ```bash
-   git clone [Repository-URL]
-   ```
-2. **Dateien öffnen**  
-   Bearbeite die HTML-, CSS- und JS-Dateien in einem Editor wie VS Code.
-
 ## Kontakt
 
 Ich freue mich über dein Feedback oder Anfragen! Du erreichst mich über folgende Kanäle:
 
 - **E-Mail**: [lirim.zahiri@students.bfh.ch](mailto:lirim.zahiri@students.bfh.ch)
-- **GitHub**: [github.com/lirimzahiri](https://github.com/lirimzahiri)
 - **LinkedIn**: [linkedin.com/in/lirimzahiri](https://linkedin.com/in/lirimzahiri)
 
 ## Quellen und Referenzen
