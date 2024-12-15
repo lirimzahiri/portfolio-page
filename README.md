@@ -40,11 +40,9 @@ Die Website verwendet folgende Technologien und Frameworks:
   - **LocalStorage API**: Speichern von Benutzereinstellungen (Farbschema & Darkmode).
   - **Fetch API**: Laden von GitHub-Daten.
 - **Bootstrap**: Für responsive Layouts und schnelle UI-Komponenten.
-- **AOS (Animate on Scroll)**: Animierte Übergänge beim Scrollen.
-- **Typed.js**: Interaktive Textanimationen.
 - **Web3Forms API**: Kontaktformular-Verarbeitung.
 - **Spotify Embed API**: Integriert eine interaktive Spotify-Playlist, um eine persönliche Note hinzuzufügen und die Benutzererfahrung zu bereichern.
-- **Devicon**: Bietet professionelle Icons zur Darstellung von Technologien und Fähigkeiten in der Skills-Sektion.
+- **Devicon**: Icons zur Darstellung von Technologien und Fähigkeiten in der Skills-Sektion.
 - **GitHub API**: Dient zum Abrufen und Anzeigen von GitHub-Informationen, einschliesslich Profilbild, Bio und Repository-Liste.
 
 ## Features
