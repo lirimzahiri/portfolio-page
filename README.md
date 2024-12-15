@@ -27,6 +27,15 @@ Die Website verwendet folgende Technologien und Frameworks:
 - **Devicon**: Bietet professionelle Icons zur Darstellung von Technologien und Fähigkeiten in der Skills-Sektion.
 - **GitHub API**: Dient zum Abrufen und Anzeigen von GitHub-Informationen, einschliesslich Profilbild, Bio und Repository-Liste.
 
+## **Lottie JSON Animation**
+
+Die Website verwendet eine **Lottie-Animation**, um interaktive und visuelle Akzente zu setzen. Der animierte **Scroll-Pfeil** weist Benutzer darauf hin, dass die Seite weitergeht.
+
+**Technische Umsetzung**:
+
+- Die Animation wird mit **lottie-web** eingebunden und aus einer JSON-Datei gerendert.
+- Die Farbe passt sich dynamisch an die aktuelle **`--accent-color`** der Website an.
+
 ## Features
 
 ### Dynamisches Theme- und Farbsystem
@@ -110,3 +119,6 @@ Während der Entwicklung dieser Website habe ich auf verschiedene Ressourcen und
 
 - **Favicon**: Erstellen des eigenen Favicons für die Seite.
   [https://favicon.io/](https://favicon.io/)
+
+- **Lottieflies**: Animationen kostenslos herunterladen.
+  [https://lottiefiles.com](https://lottiefiles.com)
