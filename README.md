@@ -124,5 +124,5 @@ Während der Entwicklung dieser Website habe ich auf verschiedene Ressourcen und
 - **Favicon**: Erstellen des eigenen Favicons für die Seite.  
   [https://favicon.io/](https://favicon.io/)
 
-- **Lottieflies**: Animationen kostenslos herunterladen.  
+- **Lottieflies**: Animationen kostenlos herunterladen.  
   [https://lottiefiles.com](https://lottiefiles.com)
